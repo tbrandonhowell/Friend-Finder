@@ -79,7 +79,6 @@ app.post("/api/friends", function(req,res) {
     console.log({closestName});
     let closestPhoto;
     console.log({closestPhoto})
-    // TODO: scoping issue here. closestScore/Name/Photo aren't being touched.
     for (let i = 0; i<(friends.length - 1); i++) {
         console.log("friends array loop [" + i + "]");
         console.log("comparing input (" + data.name + ") against (" + friends[i].name + ")");
@@ -89,12 +88,7 @@ app.post("/api/friends", function(req,res) {
             scoreDiff += Math.abs(friends[i].scores[x] - data.scores[x]);
             console.log("Friends array loop [" + x + "], scoreDiff now: " + scoreDiff);
         }
-        if (closestScore == undefined) {
-            console.log("closestScore is undefined");
-            closestScore = scoreDiff;
-            closestName = data.name;
-            closestPhoto = data.photo;
-        } else if (scoreDiff < closestScore) {
+        if (scoreDiff < closestScore) {
             console.log("scoreDiff is less than closestScore, updating closestScore/Name/Photo");
             closestScore = scoreDiff;
             closestName = friends[i].name;

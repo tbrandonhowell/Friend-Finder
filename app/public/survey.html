@@ -11,6 +11,26 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </head>
     <body>
+
+        <!-- Match Modal -->
+        <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h3 class="modal-title">Best Match</h3>
+                <hr>
+                </div>
+                <div class="modal-body">
+                    <h4 id="matchName"></h4>
+                    <img class="img-fluid" src="" id="matchImage">
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeButton">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
         <div class="container">
             <h1>Survey Questions</h1>
 
@@ -188,6 +208,9 @@
                 console.log(newSubmission);
                 $.post("/api/friends",newSubmission,function(data) {
                     console.log(data);
+                    $("#matchName").text(data.matchName);
+                    $("#matchImage").attr("src",data.matchPhoto);
+                    $("#matchModal").modal(); // trigger the match modal
                 });
             });
         </script>
