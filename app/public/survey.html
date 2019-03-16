@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Friend Finder</title>
+        <title>Platonic Nerd Companionship Index&trade;</title>
         <script
         src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -9,6 +9,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
 
@@ -17,7 +18,7 @@
             <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <h3 class="modal-title">Best Match</h3>
+                <h3 class="modal-title">Best Match:</h3>
                 <hr>
                 </div>
                 <div class="modal-body">
@@ -31,162 +32,161 @@
             </div>
         </div>
 
+        <!-- Page Content -->
         <div class="container">
-            <h1>Survey Questions</h1>
+            <div class="row">
+                <div class="col-sm">
 
-            <hr>
+                    <h1 class="display-4">Platonic Nerd Companionship Index&trade;</h1>
+                    <hr>
+                    
+                    <form role="form">
+
+                        <h2 class="mb-3">About You</h2>
+                        <h4>Name (Required)</h4>
+                        <input class="form-control mb-3" type="text" id="name">
+                        <h4>Link to Photo Image (Required)</h4>
+                        <input class="form-control mb-3" type="text" id="image">
+
+                        <hr>
+
+                        <h2 class="my-4">Compatibility Questions:</h2>
+
+                        <h4>1: Star Trek is better than Star Wars.</h4>
             
-            <form role="form">
+                            <label class="radio d-block"><input type="radio" name="q1" id="q1" value="1" checked> 1 (Strongly Disagree)</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q1" id="q1" value="2"> 2</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q1" id="q1" value="3"> 3</label>
+            
+                            <label class="radio d-block"><input type="radio" name="q1" id="q1" value="4"> 4</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q1" id="q1" value="5"> 5 (Strongly Agree)</label>
+                
+                        <h4 class="mt-4">2: DC (as a whole) is better than Marvel.</h4>
 
-            <h2>About You</h2>
-            <h4>Name (Required)</h4>
-            <input class="form-control" type="text" id="name">
-            <h4>Link to Photo Image (Required)</h4>
-            <input class="form-control" type="text" id="image">
+                            <label class="radio d-block"><input type="radio" name="q2" id="q2" value="1" checked> 1 (Strongly Disagree)</label>
+        
+                            <label class="radio d-block"><input type="radio" name="q2" id="q2" value="2"> 2</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q2" id="q2" value="3"> 3</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q2" id="q2" value="4"> 4</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q2" id="q2" value="5"> 5 (Strongly Agree)</label>
 
-            <hr>
+                        <h4 class="mt-4">3: I'd rather read a book than watch a movie.</h4>
+            
+                            <label class="radio d-block"><input type="radio" name="q3" id="q3" value="1" checked> 1 (Strongly Disagree)</label>
+            
+                            <label class="radio d-block"><input type="radio" name="q3" id="q3" value="2"> 2</label>
+            
+                            <label class="radio d-block"><input type="radio" name="q3" id="q3" value="3"> 3</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q3" id="q3" value="4"> 4</label>
+                        
+                            <label class="radio d-block"><input type="radio" name="q3" id="q3" value="5"> 5 (Strongly Agree)</label>
+                
+                        <h4 class="mt-4">4: I prefer SciFi over historical fiction.</h4>
+                    
+                            <label class="radio d-block"><input type="radio" name="q4" id="q4" value="1" checked> 1 (Strongly Disagree)</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q4" id="q4" value="2"> 2</label>
+            
+                            <label class="radio d-block"><input type="radio" name="q4" id="q4" value="3"> 3</label>
+                        
+                            <label class="radio d-block"><input type="radio" name="q4" id="q4" value="4"> 4</label>
+                        
+                            <label class="radio d-block"><input type="radio" name="q4" id="q4" value="5"> 5 (Strongly Agree)</label>
+                
+                        <h4 class="mt-4">5: I prefer drama over action. (For movies, books, tv, etc)</h4>
+                
+                            <label class="radio d-block"><input type="radio" name="q5" id="q5" value="1" checked> 1 (Strongly Disagree)</label>
+            
+                            <label class="radio d-block"><input type="radio" name="q5" id="q5" value="2"> 2</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q5" id="q5" value="3"> 3</label>
+        
+                            <label class="radio d-block"><input type="radio" name="q5" id="q5" value="4"> 4</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q5" id="q5" value="5"> 5 (Strongly Agree)</label>
+                        
+                        <h4 class="mt-4">6: Console games are more fun than PC games.</h4>
+                    
+                            <label class="radio d-block"><input type="radio" name="q6" id="q6" value="1" checked> 1 (Strongly Disagree)</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q6" id="q6" value="2"> 2</label>
+            
+                            <label class="radio d-block"><input type="radio" name="q6" id="q6" value="3"> 3</label>
+                        
+                            <label class="radio d-block"><input type="radio" name="q6" id="q6" value="4"> 4</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q6" id="q6" value="5"> 5 (Strongly Agree)</label>
 
-            <h2>Question 1</h2>
-            <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q1">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
+                        <h4 class="mt-4">7: The answer to life is 42.</h4>
+            
+                            <label class="radio d-block"><input type="radio" name="q7" id="q7" value="1" checked> 1 (Strongly Disagree)</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q7" id="q7" value="2"> 2</label>
+                        
+                            <label class="radio d-block"><input type="radio" name="q7" id="q7" value="3"> 3</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q7" id="q7" value="4"> 4</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q7" id="q7" value="5"> 5 (Strongly Agree)</label>
+                
+                        <h4 class="mt-4">8: I'm down with Bronies.</h4>
+                    
+                            <label class="radio d-block"><input type="radio" name="q8" id="q8" value="1" checked> 1 (Strongly Disagree)</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q8" id="q8" value="2"> 2</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q8" id="q8" value="3"> 3</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q8" id="q8" value="4"> 4</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q8" id="q8" value="5"> 5 (Strongly Agree)</label>
+                    
+                        <h4 class="mt-4">9: Power Rangers was cooler than Voltron.</h4>
+                    
+                            <label class="radio d-block"><input type="radio" name="q9" id="q9" value="1" checked> 1 (Strongly Disagree)</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q9" id="q9" value="2"> 2</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q9" id="q9" value="3"> 3</label>
+                        
+                            <label class="radio d-block"><input type="radio" name="q9" id="q9" value="4"> 4</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q9" id="q9" value="5"> 5 (Strongly Agree)</label>
+                    
+                        <h4 class="mt-4">10: LARPers are more fun to hang out with than Cosplayers.</h4>
+                
+                            <label class="radio d-block"><input type="radio" name="q10" id="q10" value="1" checked> 1 (Strongly Disagree)</label>
+            
+                            <label class="radio d-block"><input type="radio" name="q10" id="q10" value="2"> 2</label>
+        
+                            <label class="radio d-block"><input type="radio" name="q10" id="q10" value="3"> 3</label>
+                
+                            <label class="radio d-block"><input type="radio" name="q10" id="q10" value="4"> 4</label>
+                    
+                            <label class="radio d-block"><input type="radio" name="q10" id="q10" value="5"> 5 (Strongly Agree)</label>
+                    
+                        <button class="btn btn-block btn-success mt-4" type="submit" id="submitBtn">
+                            <i class="fa fa-paper-plane-o"></i>Submit
+                        </button>
+
+                        <hr>
+
+                    </form>
+                </div>
+            </div> <!-- close row -->
+            <div class="row">
+                <div class="col-sm">
+                    <a href="api/friends">API Friends List</a> | <a href="https://github.com/tbrandonhowell/Friend-Finder">GitHub Repo</a>
+                </div>
             </div>
-
-
-
-            <h2>Question 2</h2>
-            <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q2">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-
-            <h2>Question 3</h2>
-            <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q3">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-
-            <h2>Question 4</h2>
-            <h4>You rarely do something just out of sheer curiosity.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q4">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-
-            <h2>Question 5</h2>
-            <h4>People can rarely upset you.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q5">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-
-            <h2>Question 6</h2>
-            <h4>It is often difficult for you to relate to other people’s feelings.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q6">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-
-            <h2>Question 7</h2>
-            <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q7">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-
-            <h2>Question 8</h2>
-            <h4>You rarely get carried away by fantasies and ideas.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q8">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-
-            <h2>Question 9</h2>
-            <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q9">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-
-            <h2>Question 10</h2>
-            <h4>You feel more energetic after spending time with a group of people.</h4>
-            <div class="form-group">
-                <select class="form-control" id="q10">
-                    <option value="1">1 (Strongly Disagree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Strongly Agree)</option>
-                </select>
-            </div>
-
-
-            <button class="btn btn-primary" type="submit" id="submitBtn">Submit</button>
-
-            </form>
-
-            <hr>
-
-        </div>
-        <div>
-            <a href="api/friends">API Friends List</a> | <a href="https://github.com/tbrandonhowell/Friend-Finder">GitHub Repo</a>
-        </div>
+        </div> <!-- close container -->
 
         <script>
             $("#submitBtn").on("click", function(event){
@@ -194,16 +194,16 @@
                 const newSubmission = {
                     name: $("#name").val().trim(),
                     image: $("#image").val().trim(),
-                    q1: $("#q1").val(),
-                    q2: $("#q2").val(),
-                    q3: $("#q3").val(),
-                    q4: $("#q4").val(),
-                    q5: $("#q5").val(),
-                    q6: $("#q6").val(),
-                    q7: $("#q7").val(),
-                    q8: $("#q8").val(),
-                    q9: $("#q9").val(),
-                    q10: $("#q10").val()
+                    q1: $("input[name=q1]:checked").val(),
+                    q2: $("input[name=q2]:checked").val(),
+                    q3: $("input[name=q3]:checked").val(),
+                    q4: $("input[name=q4]:checked").val(),
+                    q5: $("input[name=q5]:checked").val(),
+                    q6: $("input[name=q6]:checked").val(),
+                    q7: $("input[name=q7]:checked").val(),
+                    q8: $("input[name=q8]:checked").val(),
+                    q9: $("input[name=q9]:checked").val(),
+                    q10: $("input[name=q10]:checked").val()
                 };
                 console.log(newSubmission);
                 $.post("/api/friends",newSubmission,function(data) {
